@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Print all available facts
+    setup:
+    register: facts
+  - name : write the ip into a file
+    copy:
+      content: "{{ facts.ansible_facts.ansible_all_ipv4_addresses }}"
+      dest: ~/projects/playbooks-tutorial/ip_address

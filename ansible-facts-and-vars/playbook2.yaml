@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Clone Git repo
+    ansible.builtin.git:
+      repo: https://github.com/ashtroboy79/QA-DevOps-Core-Practical-Project
+      dest: ~/QA/week8/QA-DevOps-Core-Practical-Project
+      # separate_git_dir: ~/QA/week8/QA-DevOps-Core-Practical-Project.git
